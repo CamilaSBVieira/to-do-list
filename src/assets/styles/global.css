@@ -1,0 +1,26 @@
+@import url('./reset.css');
+@import url('./variables.css');
+
+:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--purple-400);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--gray-600);
+    -webkit-font-smoothing: antialiased;
+}
+body, input, textarea, button {
+    font-family: 'Inter', sans-serif;
+}
+.container {
+    width: 90%;
+    margin: 0 auto 2rem;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+}

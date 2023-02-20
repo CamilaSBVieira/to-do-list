@@ -1,0 +1,59 @@
+.tasks {
+    margin-top: 4rem;
+}
+
+.tasksHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: .875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.tasksCreated {
+    color: var(--blue-200);
+}
+
+.tasksCreated span,
+.tasksFinished span {
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+    font-size: .75rem;
+    border-radius: 9px;
+    padding: .125rem .5rem;
+    margin-left: .5rem;
+}
+
+.tasksFinished {
+    color: var(--purple-200);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+    footer {
+        justify-content: flex-end;
+    }
+}
+.footerButton {
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+    padding: .313rem;
+    border-radius: 4px;
+    color: var(--gray-300);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem;
+}
+.footerButton:hover {
+    background-color: var(--gray-400);
+    color: var(--red-200);
+}

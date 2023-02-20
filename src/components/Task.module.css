@@ -1,0 +1,70 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: .75rem;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+}
+.task + .task {
+    margin-top: .75rem;
+}
+
+.taskCheckbox {
+    background-color: transparent;
+    border: 2px solid var(--blue-200);
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+.taskCheckbox:hover {
+    background-color: var(--blue-400-alpha);
+    border: 2px solid var(--blue-400);
+}
+.taskCheckboxChecked {
+    background-color: var(--purple-400);
+    border: 2px solid var(--purple-400);
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    cursor: pointer;
+}
+.taskCheckbox svg  {
+    opacity: 0;
+}
+.taskCheckboxChecked:hover {
+    background-color: var(--purple-200);
+    border: 2px solid var(--purple-200);
+}
+.taskCheckboxChecked svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--gray-100);
+}
+
+.taskContent {
+    color: var(--gray-100);
+    font-size: .875rem;
+    line-height: 1.4;
+}
+
+.taskDeleteButton {
+    background-color: transparent;
+    border: none;
+    line-height: 0;
+    padding: .313rem;
+    border-radius: 4px;
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.taskDeleteButton:hover {
+    background-color: var(--gray-400);
+    color: var(--red-200);
+}
