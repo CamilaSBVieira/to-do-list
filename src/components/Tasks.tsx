@@ -41,7 +41,7 @@ export function Tasks({ tasks, onDeleteTask, onToggleTask, onDeleteAllTasks, onD
     <section className={styles.tasks}>
       <header className={styles.tasksHeader}>
         <p className={styles.tasksCreated}>Tarefas criadas <span>{numberOfTasks}</span></p>
-        <p className={styles.tasksFinished}>Concluídas <span>{numberOfCompletedTasks} de {numberOfTasks}</span></p>
+        <p className={styles.tasksFinished}>Concluídas {tasks.length === 0 && <span>0</span> || <span>{numberOfCompletedTasks} de {numberOfTasks}</span>}</p>
       </header>
       {tasks.length === 0 &&
         <div className={styles.taskListEmpty}>
