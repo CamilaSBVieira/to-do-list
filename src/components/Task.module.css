@@ -10,6 +10,13 @@
 .task + .task {
     margin-top: .75rem;
 }
+.task div {
+    display: flex;
+    gap: .75rem;
+    flex: 1;
+    align-items: center;
+    cursor: pointer;
+}
 
 .taskCheckbox {
     background-color: transparent;
@@ -52,7 +59,12 @@
     color: var(--gray-100);
     font-size: .875rem;
     line-height: 1.4;
-    flex: 1;
+}
+.taskContentChecked {
+    color: var(--gray-300);
+    text-decoration: line-through;
+    font-size: .875rem;
+    line-height: 1.4;
 }
 
 .taskDeleteButton {

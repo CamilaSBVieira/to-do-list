@@ -57,3 +57,16 @@ footer {
     background-color: var(--gray-400);
     color: var(--red-200);
 }
+
+.taskListEmpty {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--gray-300);
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+    padding: 4rem 0;
+}
+.taskListEmptyTitle {
+    font-weight: bold;
+}

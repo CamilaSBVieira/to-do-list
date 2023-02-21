@@ -1,6 +1,7 @@
 import { TaskType } from '../App'
 import { Task } from './Task'
 import { Trash, TrashSimple } from 'phosphor-react'
+import emptyList from '../assets/images/emptyList.png'
 import styles from './Tasks.module.css'
 
 export type deleteFunction = (id: number) => void
@@ -42,12 +43,21 @@ export function Tasks({ tasks, onDeleteTask, onToggleTask, onDeleteAllTasks, onD
         <p className={styles.tasksCreated}>Tarefas criadas <span>{numberOfTasks}</span></p>
         <p className={styles.tasksFinished}>Concluídas <span>{numberOfCompletedTasks} de {numberOfTasks}</span></p>
       </header>
-      <div>
-        {tasks.map((task: TaskType) => <Task key={task.id} task={task} onDeleteTask={onDeleteTask} onToggleTask={onToggleTask} />)}
-      </div>
-      <footer>
-        {tasks.length === 0 ||
-          <>
+      {tasks.length === 0 &&
+        <div className={styles.taskListEmpty}>
+          <img src={emptyList} />
+          <h3 className={styles.taskListEmptyTitle}>Você ainda não tem tarefas cadastradas</h3>
+          <p>Crie tarefas e organize seus itens a fazer</p>
+        </div>
+        ||
+        <>
+          <div>
+            {tasks.sort((task: TaskType) => task.completed ? 1 : -1)
+              .map((task: TaskType) => <Task key={task.id} task={task} onDeleteTask={onDeleteTask} onToggleTask={onToggleTask} />)}
+          </div>
+          <footer>
+
+
             <button
               onClick={handleDeleteAllTasks}
               className={styles.footerButton}
@@ -62,9 +72,9 @@ export function Tasks({ tasks, onDeleteTask, onToggleTask, onDeleteAllTasks, onD
               Excluir tarefas concluídas
               <TrashSimple size={24} />
             </button>
-          </>
-        }
-      </footer>
+          </footer>
+        </>
+      }
     </section>
   )
 }

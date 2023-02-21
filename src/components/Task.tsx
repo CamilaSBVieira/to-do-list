@@ -21,14 +21,20 @@ export function Task({ task, onDeleteTask, onToggleTask }: TaskProps) {
 
     return (
         <div className={styles.task}>
-            <button
-                onClick={handleTaskCompletion}
-                title="Deletar tarefa"
-                className={task.completed ? styles.taskCheckboxChecked : styles.taskCheckbox}
-            >
-                <Check size={14.82} />
-            </button>
-            <p className={styles.taskContent}>{task.content}</p>
+            <div onClick={handleTaskCompletion}>
+                <button
+                    
+                    title="Deletar tarefa"
+                    className={task.completed ? styles.taskCheckboxChecked : styles.taskCheckbox}
+                >
+                    <Check size={14.82} />
+                </button>
+                <p
+                    className={task.completed ? styles.taskContentChecked : styles.taskContent}
+                >
+                    {task.content}
+                </p>
+            </div>
             <button
                 onClick={handleDeleteTask}
                 className={styles.taskDeleteButton}
