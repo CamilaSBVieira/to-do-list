@@ -17,6 +17,9 @@ export function NewTask({ onAddNewTask }: NewTaskProps) {
 
     const handleAddNewTask = (e: FormEvent) => {
         e.preventDefault()
+        if(newTask.length === 0) {
+            return
+        }
         onAddNewTask({id: Date.now(), content: newTask, completed: false})
         setNewTask('')
     }
