@@ -11,13 +11,13 @@
 }
 
 .tasksCreated {
-    color: var(--blue-200);
+    color: var(--pink-200);
 }
 
 .tasksCreated span,
 .tasksFinished span {
-    background-color: var(--gray-400);
-    color: var(--gray-200);
+    background-color: var(--pink-400);
+    color: var(--white);
     font-size: .75rem;
     border-radius: 9px;
     padding: .125rem .5rem;
@@ -54,7 +54,7 @@ footer {
     padding: 1rem;
 }
 .footerButton:hover {
-    background-color: var(--gray-400);
+    background-color: var(--pink-400-alpha);
     color: var(--red-200);
 }
 

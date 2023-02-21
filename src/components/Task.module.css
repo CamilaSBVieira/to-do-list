@@ -1,10 +1,8 @@
 .task {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem;
     gap: .75rem;
-    background-color: var(--gray-500);
+    background-color: var(--white-300);
     border-radius: 8px;
 }
 .task + .task {
@@ -16,11 +14,12 @@
     flex: 1;
     align-items: center;
     cursor: pointer;
+    padding: 1rem;
 }
 
 .taskCheckbox {
     background-color: transparent;
-    border: 2px solid var(--blue-200);
+    border: 2px solid var(--pink-200);
     border-radius: 50%;
     height: 1.5rem;
     width: 1.5rem;
@@ -28,8 +27,8 @@
     cursor: pointer;
 }
 .taskCheckbox:hover {
-    background-color: var(--blue-400-alpha);
-    border: 2px solid var(--blue-400);
+    background-color: var(--pink-400-alpha);
+    border: 2px solid var(--pink-400);
 }
 .taskCheckboxChecked {
     background-color: var(--purple-400);
@@ -56,7 +55,8 @@
 }
 
 .taskContent {
-    color: var(--gray-100);
+    color: var(--gray-300);
+    font-weight: bold;
     font-size: .875rem;
     line-height: 1.4;
 }
@@ -75,9 +75,10 @@
     border-radius: 4px;
     color: var(--gray-300);
     cursor: pointer;
+    margin: 1rem;
 }
 
 .taskDeleteButton:hover {
-    background-color: var(--gray-400);
+    background-color: var(--pink-400-alpha);
     color: var(--red-200);
 }

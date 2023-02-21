@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: var(--gray-600);
+    background-color: var(--white);
     -webkit-font-smoothing: antialiased;
 }
 body, input, textarea, button {

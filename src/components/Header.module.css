@@ -1,5 +1,5 @@
 .header {
-    background-color: var(--gray-700);
+    background-color: var(--white-200);
     padding: 5.125rem 0;
     display: flex;
     justify-content: center;
@@ -7,12 +7,12 @@
     gap: .75rem;
 }
 .headerLogo {
-    width: 1.375rem;
-    height: 2.25rem;
+    width: 5rem;
+    height: 5rem;
 }
 .headerTitle {
     font-size: 2.5rem;
-    color: var(--blue-200);
+    color: var(--pink-200);
     font-weight: bold;
 }
 .headerTitle > span {
